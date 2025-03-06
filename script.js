@@ -106,7 +106,15 @@ class linkedList {
                 }
                 actual = actual.siguiente;
             }
-            return null;
+            return null; //pedido no encontrado
         }
-        
+
+        mostrarLista() {
+            let actual = this.cabeza;
+            while (actual !== null) {
+                console.log(actual.pedido);
+                actual = actual.siguiente;
+            }
+        }
+
 }
