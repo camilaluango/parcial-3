@@ -43,4 +43,18 @@ class linkedList {
     constructor(){
         this.cabeza = null;
     }
+
+    aggFinal (pedido){
+        const nuevoNodo = new nodo (pedido);
+        if (this.cabeza === null) {
+            this.cabeza = nuevoNodo;
+        } else {
+            let actual = this.cabeza;
+            while (actual.siguiente !== null){
+                actual = actual.siguiente;
+            }
+            actual.siguiente = nuevoNodo;
+        }
+    }
+    
 }
