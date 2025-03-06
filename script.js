@@ -24,5 +24,23 @@ class pedido {
         this.procesado = false;
 
     }
+    marcarProcesado(){
+        this.procesado = true;
+
+    }
 }
 
+
+class nodo {
+    constructor(pedido){
+        this.pedido = pedido;
+        this.siguiente = null;
+
+    }
+}
+
+class linkedList {
+    constructor(){
+        this.cabeza = null;
+    }
+}
