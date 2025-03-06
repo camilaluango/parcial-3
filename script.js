@@ -56,5 +56,24 @@ class linkedList {
             actual.siguiente = nuevoNodo;
         }
     }
+
+    insertarPosicion(pedido, posicion) {
+        const nuevoNodo = new nodo(pedido);
+        if (posicion === 0){
+            nuevoNodo.siguiente = this.cabeza;
+            this.cabeza = nuevoNodo;
+            return;
+        }
+        let actual = this.cabeza;
+        let contador = 0;
+        while (actual !== null) {
+            console.log("posicion fuera de los limites");
+        }
+
+        nuevoNodo.siguiente = actual.siguiente;
+        actual.siguiente = nuevoNodo;
+    }
+
+    
     
 }
