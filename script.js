@@ -81,18 +81,32 @@ class linkedList {
 
         if (posicion === 0){
             this.cabeza = this.cabeza.siguiente;
-            let contador = 0
-            while (actual !== null && contador < posicion - 1){
+            return;
+        }
+        let actual = this.cabeza;
+        let contador = 0
+        while (actual !== null && contador < posicion - 1){
                 actual = actual.siguiente;
                 contador++;
             }
 
             if (actual === null || actual.siguiente === null) {
-                console.log("posicion fuera de los limites")
+                console.log("posicion fuera de los limites");
             }
 
             actual.siguiente = actual.siguiente.siguiente;
+        
         }
-    }
-    
+
+        buscarPedido(id){
+            let actual = this.cabeza;
+            while (actual !== null) {
+                if (actual.pedido.id === id) {
+                    return actual.pedido;
+                }
+                actual = actual.siguiente;
+            }
+            return null;
+        }
+        
 }
