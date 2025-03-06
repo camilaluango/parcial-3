@@ -74,6 +74,25 @@ class linkedList {
         actual.siguiente = nuevoNodo;
     }
 
-    
+    eliminarPosicion(posicion){
+        if (this.cabeza === null){
+            console.log("la lista esta vacia")
+        }
+
+        if (posicion === 0){
+            this.cabeza = this.cabeza.siguiente;
+            let contador = 0
+            while (actual !== null && contador < posicion - 1){
+                actual = actual.siguiente;
+                contador++;
+            }
+
+            if (actual === null || actual.siguiente === null) {
+                console.log("posicion fuera de los limites")
+            }
+
+            actual.siguiente = actual.siguiente.siguiente;
+        }
+    }
     
 }
